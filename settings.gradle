@@ -1,0 +1,5 @@
+rootProject.name = 'grpc-performance-test'
+include 'idl'
+include 'grpc-server'
+include 'grpc-client'
+
