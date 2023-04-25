@@ -10,8 +10,7 @@ build:
 
 # deploy the app to firebase
 .PHONY: deploy
-deploy:
-	make build
+deploy: build
 	@echo "🎁 Deploying to cloud run service - demo-grpc-server"
 	gcloud run deploy $(SERVICE_NAME) --image gcr.io/$(GCP_PROJECT)/$(SERVICE_NAME):0.1 \
 	--project $(GCP_PROJECT) \
